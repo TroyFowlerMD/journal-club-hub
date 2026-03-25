@@ -127,18 +127,21 @@ a:hover { color: var(--accent-hover); }
   flex-direction: column;
 }
 .logo-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
   color: var(--text);
 }
+.logo-title .logo-accent {
+  color: var(--accent);
+}
 .logo-subtitle {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--text-faint);
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: none;
   margin-top: 2px;
 }
 
