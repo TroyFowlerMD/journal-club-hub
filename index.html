@@ -1,1 +1,488 @@
-<!DOCTYPE html><html><head><title>Journal Club Hub</title></head><body><h1>Coming Soon</h1></body></html>
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal Club Hub — TroyMD</title>
+<meta name="description" content="Interactive addiction medicine journal club dashboards for clinical teaching by TroyMD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Mobile Hamburger -->
+<button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+</button>
+
+<!-- Sidebar Overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <a href="#" class="logo-link">
+        <!-- SVG Logo: Stylized JC + open book / molecular nodes -->
+        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="TroyMD Journal Club">
+          <!-- Open book shape -->
+          <path d="M20 8 C20 8, 8 6, 4 10 L4 32 C8 28, 20 30, 20 30 C20 30, 32 28, 36 32 L36 10 C32 6, 20 8, 20 8Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.25"/>
+          <line x1="20" y1="8" x2="20" y2="30" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+          <!-- JC letterform -->
+          <text x="10" y="24" font-family="Inter, sans-serif" font-size="13" font-weight="800" fill="var(--accent)" letter-spacing="-0.5">JC</text>
+          <!-- Molecular nodes -->
+          <circle cx="32" cy="12" r="2.5" fill="var(--accent)" opacity="0.7"/>
+          <circle cx="28" cy="17" r="1.5" fill="var(--accent)" opacity="0.5"/>
+          <circle cx="34" cy="19" r="1.8" fill="var(--accent)" opacity="0.4"/>
+          <line x1="32" y1="12" x2="28" y2="17" stroke="var(--accent)" stroke-width="1" opacity="0.4"/>
+          <line x1="32" y1="12" x2="34" y2="19" stroke="var(--accent)" stroke-width="1" opacity="0.3"/>
+          <line x1="28" y1="17" x2="34" y2="19" stroke="var(--accent)" stroke-width="0.8" opacity="0.25"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-title">TroyMD</span>
+          <span class="logo-subtitle">Journal Club</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#home" class="active" data-section="home">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#library" data-section="library">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            Article Library
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#ideas" data-section="ideas">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="16"/>
+              <line x1="8" y1="12" x2="16" y2="12"/>
+            </svg>
+            Article Ideas
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" data-section="about">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="16" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="theme-toggle-icon" id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="theme-toggle-icon" id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <span id="themeLabel">Light mode</span>
+      </button>
+      <a class="hub-link" href="https://troyfowlermd.github.io/my-dashboard/" target="_blank" rel="noopener noreferrer">
+        <svg class="hub-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+        </svg>
+        TroyMD Hub
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main">
+    <div class="main-content">
+
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <h1 class="hero-title">Journal Club <span class="accent">Hub</span></h1>
+        <p class="hero-subtitle">Interactive addiction medicine journal club dashboards for clinical teaching</p>
+        <p class="hero-desc">This hub hosts interactive, single-page journal club presentations for addiction medicine articles reviewed by TroyMD. Each article gets its own dedicated dashboard with structured clinical analysis.</p>
+      </section>
+
+      <!-- Article Library -->
+      <section class="section" id="library">
+        <div class="section-header">
+          <h2 class="section-title">Article Library</h2>
+          <span class="section-count">1 article</span>
+        </div>
+
+        <div class="article-grid">
+
+          <!-- FDA 7-OH Card -->
+          <a class="article-card" href="articles/fda-7oh-2025/index.html">
+            <div class="article-card-header">
+              <h3 class="article-card-title">7-Hydroxymitragynine (7-OH): An Assessment of the Scientific Data and Toxicological Concerns Around an Emerging Opioid Threat</h3>
+              <svg class="article-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+            <div class="article-meta">
+              Reissig CJ, Chiapperino D, Seitz A, Lee R, Radin R, McAninch J &mdash; <span class="article-meta-org">FDA CDER</span> &mdash; 2025
+            </div>
+            <div class="article-badges">
+              <span class="badge badge-evidence">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"/></svg>
+                Low-Moderate Evidence
+              </span>
+              <span class="badge badge-type">Government Report</span>
+            </div>
+            <p class="article-summary">FDA assessment establishing 7-OH as a potent mu-opioid agonist with greater potency than morphine and significant abuse liability. Documents the proliferation of concentrated 7-OH products sold OTC and reviews preclinical, epidemiological, and surveillance data.</p>
+            <div class="article-tags">
+              <span class="tag">kratom</span>
+              <span class="tag">7-OH</span>
+              <span class="tag">opioid pharmacology</span>
+              <span class="tag">emerging threats</span>
+              <span class="tag">regulatory</span>
+            </div>
+            <span class="article-cta">
+              View Dashboard
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </span>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- On the Radar -->
+      <section class="section" id="ideas">
+        <div class="section-header">
+          <h2 class="section-title">On the Radar</h2>
+          <span class="section-count">10 candidates</span>
+        </div>
+        <p class="section-intro">Recent addiction medicine publications of potential interest for future journal club reviews.</p>
+
+        <div class="ideas-grid">
+
+          <!-- Idea 1 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">1</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Extended-Release vs Sublingual Buprenorphine in Pregnancy through 12-months Postpartum</h3>
+            <p class="idea-source">Winhusen TJ et al. &mdash; JAMA Internal Medicine (2026)</p>
+            <p class="idea-finding">Weekly injectable XR-buprenorphine led to significantly higher illicit opioid abstinence rates than sublingual buprenorphine during pregnancy, with fewer serious adverse events. First RCT of XR-bup in pregnancy.</p>
+            <p class="idea-why">First evidence supporting LAI buprenorphine as a safe, superior option for OUD in pregnancy — immediate clinical application.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">OUD</span>
+              <span class="idea-tag">pregnancy</span>
+              <span class="idea-tag">buprenorphine</span>
+              <a class="idea-link" href="https://www.nih.gov/news-events/news-releases/clinical-trial-results-support-use-weekly-extended-release-buprenorphine-treatment-opioid-use-disorder-during-pregnancy" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Idea 2 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">2</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Low-Dose Semaglutide for Alcohol Use Disorder</h3>
+            <p class="idea-source">JAMA Psychiatry (2025)</p>
+            <p class="idea-finding">Semaglutide reduced alcohol self-administration and weekly craving vs placebo in 48 adults with AUD over 9 weeks.</p>
+            <p class="idea-why">GLP-1 agonists may represent the most important pharmacologic advance in addiction since buprenorphine. Multiple ongoing trials with results expected 2025–2027.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">pharmacotherapy</span>
+              <span class="idea-tag">AUD</span>
+              <span class="idea-tag">novel mechanisms</span>
+            </div>
+          </div>
+
+          <!-- Idea 3 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">3</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Hospital Addiction Consultation Service and Opioid Use Disorder Treatment (START RCT)</h3>
+            <p class="idea-source">Ober AJ, Murray-Krezan C, Page K, Friedmann PD et al. &mdash; JAMA Internal Medicine (2025)</p>
+            <p class="idea-finding">START intervention: 57.3% initiated MOUD in hospital vs 26.7% usual care; 72% linked to OUD care post-discharge vs 48.1%.</p>
+            <p class="idea-why">Strong RCT evidence supporting hospital-based addiction consult services — directly applicable to inpatient settings.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">MOUD</span>
+              <span class="idea-tag">hospital</span>
+              <span class="idea-tag">consult service</span>
+              <a class="idea-link" href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2832101" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Idea 4 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">4</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Smoking Cessation Improves SUD Recovery</h3>
+            <p class="idea-source">Parks et al. (2025)</p>
+            <p class="idea-finding">Quitting smoking increased odds of SUD recovery up to 42-fold in over 2,600 adults. Challenges the belief that tobacco cessation should be deferred during addiction treatment.</p>
+            <p class="idea-why">Tobacco cessation is not a threat to recovery — it's part of recovery. Practice-changing for programs that defer nicotine treatment.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">tobacco</span>
+              <span class="idea-tag">SUD recovery</span>
+              <span class="idea-tag">integrated treatment</span>
+            </div>
+          </div>
+
+          <!-- Idea 5 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">5</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">AI-Based OUD Screening in Hospitalized Adults</h3>
+            <p class="idea-source">Afshar M et al. &mdash; Nature Medicine (2025)</p>
+            <p class="idea-finding">AI screening tool clinically implemented to identify OUD risk in hospitalized patients — bridging technology and addiction care.</p>
+            <p class="idea-why">Represents the intersection of technology and addiction medicine; could improve early identification and treatment initiation.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">AI/ML</span>
+              <span class="idea-tag">OUD screening</span>
+              <span class="idea-tag">hospital</span>
+              <a class="idea-link" href="https://www.nature.com/articles/s41591-025-03603-z" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Idea 6 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">6</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Healthcare Provider Stigma Toward Patients with Substance Use Disorders</h3>
+            <p class="idea-source">Parish C et al. &mdash; Addiction (2025)</p>
+            <p class="idea-finding">Stigma highest for stimulant use disorders, then OUD, then AUD among PCPs and ED physicians. Lower stigma associated with providing MOUD and having SUD consultation available.</p>
+            <p class="idea-why">Quantifies the barrier we all face. Makes the case for addiction consultation services and integrated training.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">stigma</span>
+              <span class="idea-tag">provider attitudes</span>
+              <span class="idea-tag">consult service</span>
+              <a class="idea-link" href="https://onlinelibrary.wiley.com/doi/10.1111/add.70122" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Idea 7 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">7</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Rethinking Medication Treatment Goals for OUD</h3>
+            <p class="idea-source">McLellan &amp; Volkow</p>
+            <p class="idea-finding">Proposes a three-stage framework: protection → remission → recovery. Argues against medication tapering as default goal; supports lifelong MOUD when appropriate.</p>
+            <p class="idea-why">Paradigm shift from "taper to abstinence" model. Directly relevant to discharge planning in ASAM 3.7/3.5 settings.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">MOUD</span>
+              <span class="idea-tag">treatment philosophy</span>
+              <span class="idea-tag">recovery model</span>
+            </div>
+          </div>
+
+          <!-- Idea 8 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">8</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">TMS for Stimulant Use Disorders (STIMULUS Trial)</h3>
+            <p class="idea-source">Multi-site RCT — Protocol published May 2025</p>
+            <p class="idea-finding">Ongoing double-blind sham-controlled trial (n=160) of 10 Hz TMS to left DLPFC for cocaine/methamphetamine use disorder. Results pending.</p>
+            <p class="idea-why">If positive, could be first FDA-cleared neuromodulation treatment for stimulant addiction — a condition with no approved pharmacotherapy.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">neuromodulation</span>
+              <span class="idea-tag">stimulant use disorder</span>
+              <span class="idea-tag">clinical trials</span>
+            </div>
+          </div>
+
+          <!-- Idea 9 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">9</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">AMA 2025 Report on Substance Use and Treatment</h3>
+            <p class="idea-source">American Medical Association (2025)</p>
+            <p class="idea-finding">Overdose deaths declined from 110,000 (2023) to ~75,000 (2024). Buprenorphine prescriptions up 83% over decade but plateauing. Highlights emerging threats: xylazine, kratom, tianeptine.</p>
+            <p class="idea-why">Comprehensive policy and epidemiological overview — good for big-picture context discussions.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">epidemiology</span>
+              <span class="idea-tag">policy</span>
+              <span class="idea-tag">emerging threats</span>
+              <a class="idea-link" href="https://www.ama-assn.org/press-center/ama-press-releases/ama-2025-report-substance-use-and-treatment" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Idea 10 -->
+          <div class="idea-card">
+            <div class="idea-card-header">
+              <span class="idea-number">10</span>
+              <span class="candidate-badge">Candidate</span>
+            </div>
+            <h3 class="idea-title">Substance Use Disorder and Mortality in US Immigration Detention (2018–2025)</h3>
+            <p class="idea-source">Tirado B et al. &mdash; Journal of Addiction Medicine (2025)</p>
+            <p class="idea-finding">Among 27 deaths involving probable SUD in ICE custody, none had documented SUD diagnosis, referral, or evidence-based treatment. 9 died from untreated withdrawal complications.</p>
+            <p class="idea-why">Harrowing documentation of system failure. Raises ethics of withholding addiction treatment in institutional settings.</p>
+            <div class="idea-footer">
+              <span class="idea-tag">ethics</span>
+              <span class="idea-tag">detention</span>
+              <span class="idea-tag">treatment access</span>
+              <a class="idea-link" href="https://journals.lww.com/10.1097/ADM.0000000000001601" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="idea-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="about-content">
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+              </svg>
+              Journal Club Format
+            </h3>
+            <p>Each article receives its own interactive single-page dashboard designed for group discussion and clinical teaching. Articles are selected for their relevance to addiction medicine practice, with a focus on evidence that can change how we think and what we do.</p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+              Teaching Context
+            </h3>
+            <p>Designed for addiction medicine teaching at ASAM 3.7 (medically managed intensive inpatient) and 3.5 (clinically managed high-intensity residential) levels of care. Content supports multidisciplinary staff education and clinical decision-making.</p>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+              Dashboard Sections
+            </h3>
+            <p>Each article dashboard includes structured sections:</p>
+            <ul>
+              <li>Clinical question &amp; study overview</li>
+              <li>Key findings with data visualization</li>
+              <li>Strengths &amp; limitations analysis</li>
+              <li>Clinical implications for practice</li>
+              <li>Discussion questions for group review</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3 class="about-card-title">
+              <svg class="about-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              About TroyMD
+            </h3>
+            <p>Addiction psychiatrist reviewing and presenting journal articles for clinical teaching. This hub consolidates interactive journal club presentations into a single navigable resource.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">
+          &copy; 2025 TroyMD Journal Club &middot;
+          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

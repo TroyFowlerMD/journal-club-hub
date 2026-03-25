@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7-OH Assessment — Journal Club</title>
+<meta name="description" content="Journal club dashboard for FDA's 2025 assessment of 7-Hydroxymitragynine (7-OH) as an emerging opioid threat.">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1419'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='700' fill='%234F98A3' text-anchor='middle'%3E7%3C/text%3E%3C/svg%3E">
+
+<!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     MOBILE HEADER
+     ============================================================ -->
+<header class="mobile-header">
+  <button id="hamburger" class="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <span class="mobile-title">7-OH FDA Assessment</span>
+</header>
+
+<!-- Sidebar Overlay (mobile) -->
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<div class="app-layout">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Article navigation">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <!-- Inline SVG Logo: stylized "7-OH" molecule mark -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="7-OH Journal Club">
+          <rect width="32" height="32" rx="8" fill="currentColor" fill-opacity="0.08"/>
+          <path d="M8 10h10l-6 14" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="22" cy="14" r="4" stroke="var(--color-warning)" stroke-width="2" fill="none"/>
+          <line x1="22" y1="18" x2="22" y2="23" stroke="var(--color-warning)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="sidebar-title">7-OH Assessment</div>
+          <div class="sidebar-subtitle">FDA CDER · 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="../.." class="sidebar-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Hub
+    </a>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-label">Sections</div>
+      <a href="#overview">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+        Overview
+      </a>
+      <a href="#clinical-question">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+        Clinical Question
+      </a>
+      <a href="#background">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Background
+      </a>
+      <a href="#key-findings">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Key Findings
+      </a>
+      <a href="#strengths-limitations">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+        Strengths &amp; Limits
+      </a>
+      <a href="#clinical-implications">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Clinical Implications
+      </a>
+      <a href="#discussion">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Discussion Qs
+      </a>
+      <a href="#references">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        References
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <!-- JS fills this -->
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content">
+    <div class="main-inner">
+
+      <!-- Quick Stats Strip -->
+      <div class="quick-stats">
+        <span class="stat-pill stat-pill--warning">
+          <span class="stat-label">Evidence</span>
+          <span class="stat-value">Low-Moderate</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Type</span>
+          <span class="stat-value">FDA Assessment</span>
+        </span>
+        <span class="stat-pill stat-pill--primary">
+          <span class="stat-label">Key Finding</span>
+          <span class="stat-value">3–13× &gt; morphine potency</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Year</span>
+          <span class="stat-value">2025</span>
+        </span>
+      </div>
+
+      <!-- ========== SECTION 1: OVERVIEW ========== -->
+      <section id="overview" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          <h2 class="section-title">Overview</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Title</div>
+              <div class="meta-value" style="font-size: var(--text-sm);">7-Hydroxymitragynine (7-OH): An Assessment of the Scientific Data and Toxicological Concerns Around an Emerging Opioid Threat</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Organization</div>
+              <div class="meta-value">FDA CDER</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Publication Type</div>
+              <div class="meta-value">Government Assessment / White Paper</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Date</div>
+              <div class="meta-value">2025</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Evidence Level</div>
+              <div class="meta-value"><span class="badge badge--warning">Low-Moderate</span></div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Source</div>
+              <div class="meta-value"><a href="https://www.fda.gov/media/186029/download" target="_blank" rel="noopener noreferrer">Original PDF ↗</a></div>
+            </div>
+          </div>
+          <h3>Authors</h3>
+          <p>Chad J. Reissig, PhD · Dominic Chiapperino, PhD · Amy Seitz, PhD, MPH · Regina Lee, Pharm.D. · Rose Radin, PhD · Jana McAninch, MD, MPH, MS</p>
+          <h3>Study Design</h3>
+          <p>Comprehensive FDA assessment compiling: in vitro receptor binding data, animal behavioral studies, pharmacokinetic data, poison center data (NPDS), DEA toxicology data, social media surveillance, and published literature. This is a regulatory assessment/white paper — not a systematic review or primary research — but it synthesizes a robust preclinical literature base.</p>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 2: CLINICAL QUESTION ========== -->
+      <section id="clinical-question" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+          <h2 class="section-title">Clinical Question</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <p style="font-size: var(--text-base); color: var(--color-text); font-weight: 500; max-width: 65ch;">
+            What is the scientific evidence characterizing 7-hydroxymitragynine (7-OH) as an emerging opioid threat, and what pharmacological, epidemiological, and toxicological data support regulatory action?
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 3: BACKGROUND ========== -->
+      <section id="background" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          <h2 class="section-title">Background</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="clinical-alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+            <p><strong>Clinical relevance:</strong> Patients presenting with opioid-like withdrawal from "kratom" products may actually be dependent on 7-OH — a potent mu-opioid agonist far exceeding botanical kratom's risk profile.</p>
+          </div>
+          <ul>
+            <li><strong>7-OH is a minor alkaloid</strong> in kratom (&lt;2% of alkaloid content) but acts as a potent mu-opioid receptor agonist</li>
+            <li><strong>Concentrated 7-OH products</strong> are now sold OTC and online in forms far exceeding natural levels (109–509% higher)</li>
+            <li><strong>Product forms:</strong> Tablets, shots, gummies — often marketed to consumers unaware they are consuming a potent opioid</li>
+            <li><strong>No FDA-approved drugs</strong> contain 7-OH; current regulatory gaps enable widespread availability</li>
+            <li><strong>Directly relevant to addiction psychiatry:</strong> patients presenting with "kratom withdrawal" may actually have 7-OH dependence with more severe symptoms</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 4: KEY FINDINGS ========== -->
+      <section id="key-findings" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <h2 class="section-title">Key Findings</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+
+          <!-- Sub-tabs -->
+          <div class="subsection-tabs" role="tablist">
+            <button class="subsection-tab active" data-tab="pharmacology" role="tab" aria-selected="true">Pharmacology</button>
+            <button class="subsection-tab" data-tab="epidemiology" role="tab" aria-selected="false">Epidemiology</button>
+            <button class="subsection-tab" data-tab="pharmacokinetics" role="tab" aria-selected="false">Pharmacokinetics</button>
+            <button class="subsection-tab" data-tab="products" role="tab" aria-selected="false">Product Landscape</button>
+          </div>
+
+          <!-- PHARMACOLOGY Panel -->
+          <div id="panel-pharmacology" class="subsection-panel active" role="tabpanel">
+            <h3>Receptor Binding</h3>
+            <ul>
+              <li>7-OH binds mu-opioid receptors with <strong>high affinity</strong> — <span class="kv-highlight"><span class="kv-key">Ki</span> <span class="kv-val">7.2–70 nM</span></span> across studies</li>
+              <li>Full mu-opioid agonist — <span class="kv-highlight"><span class="kv-key">E<sub>max</sub></span> <span class="kv-val">77–86%</span></span> across assays</li>
+            </ul>
+
+            <h3>Potency vs. Morphine</h3>
+            <p>Consistently <strong>more potent than morphine</strong> across all experimental models:</p>
+
+            <div class="potency-bar-wrap">
+              <div class="potency-bar-label">
+                <span>Guinea pig ileum inhibition</span>
+                <span><strong>13×</strong> morphine</span>
+              </div>
+              <div class="potency-bar">
+                <div class="potency-bar-fill potency-bar-fill--warning" style="width: 100%"></div>
+              </div>
+            </div>
+            <div class="potency-bar-wrap">
+              <div class="potency-bar-label">
+                <span>Self-administration potency</span>
+                <span><strong>10×</strong> morphine</span>
+              </div>
+              <div class="potency-bar">
+                <div class="potency-bar-fill potency-bar-fill--warning" style="width: 77%"></div>
+              </div>
+            </div>
+            <div class="potency-bar-wrap">
+              <div class="potency-bar-label">
+                <span>Respiratory depression</span>
+                <span><strong>3×</strong> morphine</span>
+              </div>
+              <div class="potency-bar">
+                <div class="potency-bar-fill potency-bar-fill--warning" style="width: 23%"></div>
+              </div>
+            </div>
+
+            <table class="data-table" style="margin-top: var(--space-4);">
+              <thead>
+                <tr>
+                  <th>Assay</th>
+                  <th>7-OH</th>
+                  <th>Morphine</th>
+                  <th>Ratio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>GPI inhibition</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td><strong>13×</strong></td>
+                </tr>
+                <tr>
+                  <td>Resp. depression</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td><strong>3×</strong></td>
+                </tr>
+                <tr>
+                  <td>Self-admin (peak)</td>
+                  <td>5 µg/infusion</td>
+                  <td>50 µg/infusion</td>
+                  <td><strong>10×</strong></td>
+                </tr>
+                <tr>
+                  <td>CPP</td>
+                  <td colspan="2">More potent</td>
+                  <td><strong>&gt;1×</strong></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Behavioral &amp; Dependence Profile</h3>
+            <ul>
+              <li><strong>Respiratory depression:</strong> Significant; reversed by naloxone</li>
+              <li><strong>Physical dependence:</strong> 5 days of 7-OH produces classic opioid withdrawal (jumping, rearing, ptosis, tremor, diarrhea) upon naloxone challenge</li>
+              <li><strong>Cross-tolerance</strong> with morphine demonstrated</li>
+              <li><strong>Drug discrimination:</strong> Full substitution for morphine; blocked by naltrexone</li>
+              <li><strong>Self-administration:</strong> Maintained by rodents; blocked by mu and delta antagonists</li>
+              <li><strong>CPP:</strong> Produces conditioned place preference more potently than morphine</li>
+            </ul>
+          </div>
+
+          <!-- EPIDEMIOLOGY Panel -->
+          <div id="panel-epidemiology" class="subsection-panel" role="tabpanel">
+            <h3>NPDS Poison Center Data (Feb–Apr 2025)</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Total exposure cases</td>
+                  <td><strong>53</strong></td>
+                </tr>
+                <tr>
+                  <td>Abuse cases</td>
+                  <td><strong>24</strong></td>
+                </tr>
+                <tr>
+                  <td>Withdrawal cases</td>
+                  <td><strong>8</strong></td>
+                </tr>
+                <tr>
+                  <td>Minor outcomes</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Moderate outcomes</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>Major outcomes</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Cases in &lt;18 years</td>
+                  <td><strong>6</strong></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>DEA TOX Data (2019–2025)</h3>
+            <ul>
+              <li><strong>103 cases</strong> involving mitragynine/7-OH/pseudoindoxyl</li>
+              <li><strong>3-fold increase</strong> in fatal cases from 2023–2025 vs 2019–2022</li>
+            </ul>
+
+            <h3>FAERS</h3>
+            <ul>
+              <li>13 adverse event reports including <strong>2 deaths</strong></li>
+            </ul>
+
+            <h3>Social Media Surveillance</h3>
+            <ul>
+              <li>Growing reports of euphoria, addiction, and withdrawal symptoms <strong>comparable to classical opioids</strong></li>
+            </ul>
+          </div>
+
+          <!-- PHARMACOKINETICS Panel -->
+          <div id="panel-pharmacokinetics" class="subsection-panel" role="tabpanel">
+            <div class="clinical-alert">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10zM12 8v4M12 16h.01"/></svg>
+              <p><strong>Note:</strong> Limited human PK data available — derived only from botanical kratom studies, not isolated 7-OH products.</p>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Parameter</th>
+                  <th>Value</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>C<sub>max</sub></td>
+                  <td><strong>3.6–22.7 ng/mL</strong></td>
+                  <td>From botanical kratom</td>
+                </tr>
+                <tr>
+                  <td>T<sub>max</sub></td>
+                  <td><strong>1–1.8 h</strong></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Half-life</td>
+                  <td><strong>1.7–5.67 h</strong></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td>Metabolism</td>
+                  <td>CYP3A4</td>
+                  <td>Itraconazole ↓ C<sub>max</sub> 56%</td>
+                </tr>
+                <tr>
+                  <td>Steady state</td>
+                  <td><strong>~7 days</strong></td>
+                  <td>With repeated dosing</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul style="margin-top: var(--space-4);">
+              <li><strong>CYP3A4 drug interactions:</strong> Metabolism is heavily CYP3A4-dependent — co-administration with CYP3A4 inhibitors (e.g., itraconazole, ritonavir, grapefruit) could significantly increase exposure</li>
+              <li><strong>Clinical implication:</strong> Variable half-life (1.7–5.67 h) suggests unpredictable withdrawal onset timing</li>
+            </ul>
+          </div>
+
+          <!-- PRODUCT LANDSCAPE Panel -->
+          <div id="panel-products" class="subsection-panel" role="tabpanel">
+            <h3>Natural vs. Enhanced Levels</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Source</th>
+                  <th>7-OH Content</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Natural kratom</td>
+                  <td>&lt;2% of alkaloids, <strong>&lt;0.05%</strong> by weight</td>
+                </tr>
+                <tr>
+                  <td>Commercial "enhanced" products</td>
+                  <td><strong>109–509%</strong> above expected natural levels</td>
+                </tr>
+                <tr>
+                  <td>Pressed pills</td>
+                  <td>Up to <strong>15 mg/pill</strong> of 7-OH</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Product Forms</h3>
+            <ul>
+              <li><strong>82.2%</strong> of 7-OH products sold as chewable/sublingual tablets, shots, or gummies</li>
+              <li>Mean cost: <span class="kv-highlight"><span class="kv-val">$3.97</span> <span class="kv-key">per recommended dose</span></span></li>
+            </ul>
+
+            <div class="clinical-alert" style="margin-top: var(--space-4);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+              <p>Products are widely available OTC at gas stations, smoke shops, and online retailers — often indistinguishable from standard kratom products without label scrutiny.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== SECTION 5: STRENGTHS & LIMITATIONS ========== -->
+      <section id="strengths-limitations" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+          <h2 class="section-title">Strengths &amp; Limitations</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="two-col">
+            <div class="two-col-panel two-col-panel--strength">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Strengths
+              </h4>
+              <ol>
+                <li>Comprehensive synthesis of preclinical pharmacology literature</li>
+                <li>Multiple converging lines of evidence (in vitro, in vivo behavioral, epidemiological)</li>
+                <li>Consistent findings across independent research groups</li>
+                <li>Clear mechanistic framework linking pharmacology to clinical risk</li>
+                <li>Timely assessment addressing an actively evolving public health threat</li>
+              </ol>
+            </div>
+            <div class="two-col-panel two-col-panel--limitation">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Limitations
+              </h4>
+              <ol>
+                <li>No systematic review methodology described (potential selection bias)</li>
+                <li>Limited human clinical data — pharmacology is almost entirely preclinical</li>
+                <li>Epidemiological data are nascent (NPDS codes only added Feb 2025)</li>
+                <li>Cannot distinguish 7-OH from mitragynine metabolite in toxicology</li>
+                <li>Social media data is anecdotal</li>
+                <li>No dose-response characterization in humans</li>
+                <li>Assessment may underrepresent harms given surveillance limitations</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 6: CLINICAL IMPLICATIONS ========== -->
+      <section id="clinical-implications" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <h2 class="section-title">Clinical Implications for ASAM 3.7/3.5 Practice</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <ul>
+            <li>
+              <strong>Recognition:</strong> Patients presenting with "kratom withdrawal" may actually have 7-OH dependence, potentially with <strong>more severe</strong> opioid withdrawal
+            </li>
+            <li>
+              <strong>Treatment:</strong> 7-OH withdrawal should be managed with standard opioid withdrawal protocols; buprenorphine/methadone likely effective given mu-opioid mechanism
+            </li>
+            <li>
+              <strong>Screening:</strong> Ask specifically about "kratom shots," "7-OH tablets," or "enhanced kratom" — patients may not know they are using a potent opioid
+            </li>
+            <li>
+              <strong>Education:</strong> 7-OH is <strong>NOT</strong> the same as botanical kratom in terms of risk profile
+            </li>
+            <li>
+              <strong>Naloxone response:</strong> 7-OH effects are naloxone-reversible (confirmed in animal models)
+            </li>
+          </ul>
+
+          <div style="margin-top: var(--space-4);">
+            <h3>Recommendation Strength</h3>
+            <ul>
+              <li><span class="badge badge--success">Strong</span> &nbsp;Clinical awareness and routine screening</li>
+              <li><span class="badge badge--warning">Moderate</span> &nbsp;Specific treatment protocols — pending human data</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 7: DISCUSSION QUESTIONS ========== -->
+      <section id="discussion" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h2 class="section-title">Discussion Questions</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="discussion-cards">
+            <div class="discussion-card">
+              <span class="discussion-num">1</span>
+              <p>How should clinicians differentiate 7-OH dependence from traditional kratom use in the clinical interview? What specific questions should be asked?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">2</span>
+              <p>Given that 7-OH is more potent than morphine but available OTC, what are the implications for the current classification framework under the Controlled Substances Act?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">3</span>
+              <p>Should we update ASAM assessment criteria to specifically address kratom-derived/7-OH products as distinct from botanical kratom?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">4</span>
+              <p>How does the 7-OH experience compare to tianeptine ("gas station heroin") as another emerging OTC opioid threat?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">5</span>
+              <p>What is the appropriate MOUD approach for 7-OH-dependent patients? Is buprenorphine induction likely to precipitate withdrawal given 7-OH's receptor profile?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 8: REFERENCES ========== -->
+      <section id="references" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h2 class="section-title">Key References</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <ul class="ref-list">
+            <li>
+              <strong>Hill et al., 2025</strong> — <span class="ref-authors">7-OH product landscape analysis</span>
+            </li>
+            <li>
+              <strong>Obeng et al., 2020 / 2021</strong> — <span class="ref-authors">Binding affinity, functional activity, and behavioral studies of 7-OH</span>
+            </li>
+            <li>
+              <strong>Matsumoto et al., 2004 / 2005 / 2008</strong> — <span class="ref-authors">Early preclinical characterization of 7-hydroxymitragynine</span>
+            </li>
+            <li>
+              <strong>Huestis et al., 2024</strong> — <span class="ref-authors">Human pharmacokinetic study of kratom alkaloids</span>
+            </li>
+            <li>
+              <strong>Zuarth Gonzalez et al., 2025</strong> — <span class="ref-authors">Respiratory depression studies with 7-OH</span>
+            </li>
+          </ul>
+          <p style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint);">
+            Full reference list available in the <a href="https://www.fda.gov/media/186029/download" target="_blank" rel="noopener noreferrer">original FDA assessment (PDF)</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>
+          Journal Club Dashboard · For educational and clinical discussion purposes only
+        </p>
+        <p style="margin-top: var(--space-2);">
+          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
