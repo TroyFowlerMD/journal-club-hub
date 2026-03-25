@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delirium Assessment Tools — Journal Club</title>
+<meta name="description" content="Journal club dashboard comparing 4AT, Nu-DESC, CAM, and CAM-ICU diagnostic accuracy for delirium screening in hospitalized older adults.">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1419'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='700' fill='%234F98A3' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+
+<!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     MOBILE HEADER
+     ============================================================ -->
+<header class="mobile-header">
+  <button id="hamburger" class="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <span class="mobile-title">Delirium Tools</span>
+</header>
+
+<!-- Sidebar Overlay (mobile) -->
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<div class="app-layout">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Article navigation">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <!-- Inline SVG Logo: brain/neural activity mark -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Delirium Tools Journal Club">
+          <rect width="32" height="32" rx="8" fill="currentColor" fill-opacity="0.08"/>
+          <path d="M16 6c-3 0-5.5 1.5-6.5 4-.5 1.2-.5 2.5 0 3.5.3.6.8 1.2 1.5 1.5-.5.8-.5 2 0 3 .8 1.5 2.5 2 4 2h2c1.5 0 3.2-.5 4-2 .5-1 .5-2.2 0-3 .7-.3 1.2-.9 1.5-1.5.5-1 .5-2.3 0-3.5C21.5 7.5 19 6 16 6z" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="13" cy="12" r="1" fill="var(--color-primary)"/>
+          <circle cx="19" cy="12" r="1" fill="var(--color-primary)"/>
+          <circle cx="16" cy="16" r="1" fill="var(--color-primary)"/>
+          <line x1="13" y1="12" x2="16" y2="16" stroke="var(--color-primary)" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          <line x1="19" y1="12" x2="16" y2="16" stroke="var(--color-primary)" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          <line x1="13" y1="12" x2="19" y2="12" stroke="var(--color-primary)" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+          <path d="M12 22v2M16 21v3M20 22v2" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+        </svg>
+        <div>
+          <div class="sidebar-title">Delirium Tools</div>
+          <div class="sidebar-subtitle">Ageing Res Rev · 2023</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="../.." class="sidebar-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Hub
+    </a>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-label">Sections</div>
+      <a href="#overview">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+        Overview
+      </a>
+      <a href="#tools-compared">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Tools Compared
+      </a>
+      <a href="#diagnostic-accuracy">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Diagnostic Accuracy
+      </a>
+      <a href="#moderator-analysis">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+        Moderator Analysis
+      </a>
+      <a href="#strengths-limitations">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+        Strengths &amp; Limits
+      </a>
+      <a href="#clinical-implications">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Clinical Implications
+      </a>
+      <a href="#discussion">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Discussion Qs
+      </a>
+      <a href="#references">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        References
+      </a>
+      <a href="#resources">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resources
+      </a>
+      <a href="#feedback">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Feedback
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <!-- JS fills this -->
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content">
+    <div class="main-inner">
+
+      <!-- Quick Stats Strip -->
+      <div class="quick-stats">
+        <span class="stat-pill stat-pill--primary">
+          <span class="stat-label">Studies</span>
+          <span class="stat-value">30</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Patients</span>
+          <span class="stat-value">7,378</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Tools</span>
+          <span class="stat-value">3 Compared</span>
+        </span>
+        <span class="stat-pill stat-pill--primary">
+          <span class="stat-label">Evidence</span>
+          <span class="stat-value">Level I</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Sensitivity</span>
+          <span class="stat-value">76–80%</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Specificity</span>
+          <span class="stat-value">90–99%</span>
+        </span>
+      </div>
+
+      <!-- ========== SECTION 1: OVERVIEW ========== -->
+      <section id="overview" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          <h2 class="section-title">Overview</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <h3>Clinical Question</h3>
+          <p style="font-size: var(--text-base); color: var(--color-text); font-weight: 500; max-width: 65ch;">
+            In hospitalized older adults, which bedside delirium screening tool — the 4AT, Nu-DESC, or CAM — offers the best balance of diagnostic accuracy and clinical feasibility?
+          </p>
+
+          <h3>Study Design</h3>
+          <p>Systematic review and meta-analysis of diagnostic test accuracy studies. Databases: PubMed, Embase, CINAHL, ProQuest, PsycINFO (inception to Sept 7, 2022). Combined with CAM-ICU worksheet (Ely, 2002; AACN adaptation, 2013).</p>
+
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Study Design</div>
+              <div class="meta-value">SR &amp; Meta-Analysis</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Population</div>
+              <div class="meta-value">Hospitalized older adults</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Sample Size</div>
+              <div class="meta-value">30 studies / 7,378 patients</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Reference Standard</div>
+              <div class="meta-value">DSM / ICD criteria</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Tools Compared</div>
+              <div class="meta-value">4AT, Nu-DESC, CAM, CAM-ICU</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Evidence Level</div>
+              <div class="meta-value"><span class="badge badge--success">Level I</span></div>
+            </div>
+          </div>
+
+          <h3>Sources</h3>
+          <ul>
+            <li><strong>Lin CJ et al.</strong> Delirium assessment tools among hospitalized older adults: A systematic review and meta-analysis of diagnostic accuracy. <em>Ageing Research Reviews</em>, 2023;90:102025. DOI: 10.1016/j.arr.2023.102025</li>
+            <li><strong>Ely EW (original); AACN adaptation.</strong> Confusion Assessment Method for the ICU (CAM-ICU) Worksheet. SCCM 2013 PAD guidelines-endorsed.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 2: TOOLS COMPARED ========== -->
+      <section id="tools-compared" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <h2 class="section-title">Tools Compared</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+
+          <!-- Sub-tabs -->
+          <div class="subsection-tabs" role="tablist">
+            <button class="subsection-tab active" data-tab="4at" role="tab" aria-selected="true">4AT</button>
+            <button class="subsection-tab" data-tab="nudesc" role="tab" aria-selected="false">Nu-DESC</button>
+            <button class="subsection-tab" data-tab="cam" role="tab" aria-selected="false">CAM</button>
+            <button class="subsection-tab" data-tab="camicu" role="tab" aria-selected="false">CAM-ICU</button>
+          </div>
+
+          <!-- 4AT Panel -->
+          <div id="panel-4at" class="subsection-panel active" role="tabpanel">
+            <h3>4AT (4 'A's Test)</h3>
+            <div class="meta-grid">
+              <div class="meta-item">
+                <div class="meta-label">Components</div>
+                <div class="meta-value">Alertness, AMT-4, Attention (months backward), Acute change/fluctuation</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Scoring</div>
+                <div class="meta-value">0–12; ≥4 = possible delirium; 1–3 = cognitive impairment; 0 = unlikely</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Administration Time</div>
+                <div class="meta-value">~2 minutes</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Assessor</div>
+                <div class="meta-value">Any healthcare provider</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Key Advantage</div>
+                <div class="meta-value">Can assess uncooperative/untestable patients; designed for acute settings</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Studies in Meta-Analysis</div>
+                <div class="meta-value">11 studies, 2,627 patients</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nu-DESC Panel -->
+          <div id="panel-nudesc" class="subsection-panel" role="tabpanel">
+            <h3>Nu-DESC (Nursing Delirium Screening Scale)</h3>
+            <div class="meta-grid">
+              <div class="meta-item">
+                <div class="meta-label">Components</div>
+                <div class="meta-value">5 items — disorientation, inappropriate behavior, inappropriate communication, illusions/hallucinations, psychomotor retardation</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Scoring</div>
+                <div class="meta-value">0–10 (each item 0–2); ≥2 = delirium</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Administration Time</div>
+                <div class="meta-value">2–3 minutes (observation-based)</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Assessor</div>
+                <div class="meta-value">Nurses via observation during daily care</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Key Advantage</div>
+                <div class="meta-value">Observation-based; detects hypoactive delirium (psychomotor retardation item); integrates into routine nursing workflow</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Studies in Meta-Analysis</div>
+                <div class="meta-value">7 studies, 1,590 patients</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAM Panel -->
+          <div id="panel-cam" class="subsection-panel" role="tabpanel">
+            <h3>CAM (Confusion Assessment Method)</h3>
+            <div class="meta-grid">
+              <div class="meta-item">
+                <div class="meta-label">Components</div>
+                <div class="meta-value">4 features — (1) acute onset/fluctuating course, (2) inattention, (3) disorganized thinking, (4) altered LOC</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Diagnostic Algorithm</div>
+                <div class="meta-value">Features 1 AND 2 present + Feature 3 OR 4</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Administration Time</div>
+                <div class="meta-value">Longer administration (variable)</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Assessor</div>
+                <div class="meta-value">Requires specific training; best with physicians/researchers</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Key Advantage</div>
+                <div class="meta-value">Highest specificity (0.99); well-validated including in dementia populations</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Studies in Meta-Analysis</div>
+                <div class="meta-value">20 studies (17 unique), 3,002 patients</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAM-ICU Panel -->
+          <div id="panel-camicu" class="subsection-panel" role="tabpanel">
+            <h3>CAM-ICU (ICU Adaptation)</h3>
+            <div class="meta-grid">
+              <div class="meta-item">
+                <div class="meta-label">Algorithm</div>
+                <div class="meta-value">Same 4-feature CAM algorithm adapted for non-verbal/intubated patients</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Feature 1</div>
+                <div class="meta-value">Alteration/fluctuation in mental status (baseline comparison + RASS/GCS fluctuation)</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Feature 2 — Inattention</div>
+                <div class="meta-value">Letters Attention Test (SAVEAHAART); &gt;2 errors = positive</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Feature 3 — Altered LOC</div>
+                <div class="meta-value">RASS ≠ 0 or SAS ≠ 4</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Feature 4 — Disorganized Thinking</div>
+                <div class="meta-value">Yes/No questions + command following; &gt;1 combined error = positive</div>
+              </div>
+              <div class="meta-item">
+                <div class="meta-label">Frequency</div>
+                <div class="meta-value">Every shift (q8–12h); endorsed by SCCM 2013 PAD guidelines</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== SECTION 3: DIAGNOSTIC ACCURACY ========== -->
+      <section id="diagnostic-accuracy" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <h2 class="section-title">Diagnostic Accuracy</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+
+          <h3>Pooled Sensitivity (Ability to Detect Delirium)</h3>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>4AT</span>
+              <span><strong>0.76</strong> (0.63–0.85)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill" style="width: 76%"></div>
+            </div>
+          </div>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>Nu-DESC</span>
+              <span><strong>0.78</strong> (0.56–0.91)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill" style="width: 78%"></div>
+            </div>
+          </div>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>CAM</span>
+              <span><strong>0.80</strong> (0.67–0.89)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill" style="width: 80%"></div>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-faint);">No significant difference between tools (all P &gt; 0.85)</p>
+
+          <h3>Pooled Specificity (Ability to Rule Out Delirium)</h3>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>4AT</span>
+              <span><strong>0.90</strong> (0.85–0.93)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>Nu-DESC</span>
+              <span><strong>0.90</strong> (0.87–0.92)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="potency-bar-wrap">
+            <div class="potency-bar-label">
+              <span>CAM</span>
+              <span><strong>0.99</strong> (0.97–0.99)</span>
+            </div>
+            <div class="potency-bar">
+              <div class="potency-bar-fill potency-bar-fill--warning" style="width: 99%"></div>
+            </div>
+          </div>
+          <p style="margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-faint);">4AT vs CAM: P = 0.0006 · Nu-DESC vs CAM: P = 0.003</p>
+
+          <h3>Full Results with 95% Confidence Intervals</h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Sensitivity (95% CI)</th>
+                <th>Specificity (95% CI)</th>
+                <th>Studies</th>
+                <th>Patients</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>4AT</strong></td>
+                <td>0.76 (0.63–0.85)</td>
+                <td>0.90 (0.85–0.93)</td>
+                <td>11</td>
+                <td>2,627</td>
+              </tr>
+              <tr>
+                <td><strong>Nu-DESC</strong></td>
+                <td>0.78 (0.56–0.91)</td>
+                <td>0.90 (0.87–0.92)</td>
+                <td>7</td>
+                <td>1,590</td>
+              </tr>
+              <tr>
+                <td><strong>CAM</strong></td>
+                <td>0.80 (0.67–0.89)</td>
+                <td>0.99 (0.97–0.99)</td>
+                <td>20</td>
+                <td>3,002</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="clinical-alert" style="margin-top: var(--space-4);">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+            <p><strong>Critical finding:</strong> CAM sensitivity drops from 86% to 25% when administered by nurses without specific training (P = 0.00004)</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== SECTION 4: MODERATOR ANALYSIS ========== -->
+      <section id="moderator-analysis" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+          <h2 class="section-title">Moderator Analysis</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Moderator</th>
+                <th>Finding</th>
+                <th>P-value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>CAM — Assessor type</strong></td>
+                <td>Sensitivity 86% (physicians/researchers) vs 25% (nurses without training)</td>
+                <td><strong>0.00004</strong></td>
+              </tr>
+              <tr>
+                <td><strong>4AT — Setting</strong></td>
+                <td>Sensitivity 82% (acute hospital) vs 44% (long-term care)</td>
+                <td><strong>0.005</strong></td>
+              </tr>
+              <tr>
+                <td><strong>4AT &amp; Nu-DESC — Sample size</strong></td>
+                <td>Larger sample sizes positively correlated with higher sensitivity</td>
+                <td>Significant</td>
+              </tr>
+              <tr>
+                <td><strong>4AT — Sex ratio</strong></td>
+                <td>Higher female proportion → higher sensitivity, lower specificity</td>
+                <td>Significant</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 5: STRENGTHS & LIMITATIONS ========== -->
+      <section id="strengths-limitations" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+          <h2 class="section-title">Strengths &amp; Limitations</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="two-col">
+            <div class="two-col-panel two-col-panel--strength">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Strengths
+              </h4>
+              <ol>
+                <li>First meta-analysis directly comparing all 3 tools head-to-head</li>
+                <li>Used suggested cutoff values (not optimized) — reduces overestimation of diagnostic accuracy</li>
+                <li>Required DSM/ICD as gold standard reference in all included studies</li>
+                <li>Large combined sample (7,378 patients across 30 studies)</li>
+                <li>QUADAS-2 quality assessment performed on all included studies</li>
+                <li>No significant publication bias detected for any tool</li>
+              </ol>
+            </div>
+            <div class="two-col-panel two-col-panel--limitation">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Limitations
+              </h4>
+              <ol>
+                <li>Significant between-study heterogeneity for all tools</li>
+                <li>Unequal sample sizes across tools (4AT: 11, Nu-DESC: 7, CAM: 20 studies)</li>
+                <li>Some studies had unclear assessor blinding</li>
+                <li>Limited Nu-DESC data in dementia populations</li>
+                <li>Most studies in older adults (mean age &gt;65); may not generalize to younger SUD populations</li>
+                <li>No studies specifically in substance withdrawal delirium</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 6: CLINICAL IMPLICATIONS ========== -->
+      <section id="clinical-implications" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <h2 class="section-title">Clinical Implications for ASAM 3.7/3.5 Practice</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+
+          <div class="clinical-alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+            <p><strong>Transfer protocol:</strong> Confirmed delirium → immediate physician assessment → transfer to ASAM 4.0 (Mission Hospital, unless on diversion)</p>
+          </div>
+
+          <h3>Recommended Two-Stage Screening Approach</h3>
+          <ul>
+            <li><strong>Stage 1 — Nursing screen (Nu-DESC or 4AT):</strong> Routine q-shift assessment for all patients in active withdrawal
+              <ul>
+                <li><strong>Nu-DESC preferred:</strong> Observation-based, integrates into routine nursing care, detects hypoactive delirium</li>
+                <li><strong>4AT alternative:</strong> Better for uncooperative or acutely intoxicated patients</li>
+              </ul>
+            </li>
+            <li><strong>Stage 2 — Physician CAM confirmation:</strong> Any positive screen triggers formal CAM by physician/trained clinician
+              <ul>
+                <li>CAM specificity (0.99) optimal for confirming diagnosis before initiating transfer</li>
+                <li>Physician administration essential — CAM sensitivity drops to 25% with untrained assessors</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3>Special Considerations for SUD Populations</h3>
+          <ul>
+            <li><strong>Alcohol withdrawal DT timeline:</strong> Delirium tremens onset typically 48–96 hours after last drink — heighten screening during this window</li>
+            <li><strong>Benzodiazepine withdrawal:</strong> Similar timeline to alcohol; can be prolonged; monitor closely in patients on taper protocols</li>
+            <li><strong>Wernicke encephalopathy DDx:</strong> Must remain on differential — classic triad (confusion, ophthalmoplegia, ataxia) overlaps with delirium; thiamine replacement should not await diagnostic confirmation</li>
+            <li><strong>Polypharmacy / polysubstance:</strong> Complicates assessment; intoxication states may mimic delirium features (altered LOC, inattention)</li>
+            <li><strong>Age generalizability:</strong> Meta-analysis populations mean age 72–78; many SUD patients are younger — cutoff performance may differ</li>
+          </ul>
+
+          <h3>Staff Training Emphasis</h3>
+          <ul>
+            <li>CAM sensitivity drops from <strong>86% → 25%</strong> when administered by nurses without specific training (P = 0.00004)</li>
+            <li>Training programs are essential for any CAM-based protocol</li>
+            <li>Structured delirium screening results should be part of routine clinical documentation for all at-risk patients (alcohol/BZD withdrawal, elderly, medically complex)</li>
+            <li>Account for high staff turnover in residential settings — build training into onboarding</li>
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- ========== SECTION 7: DISCUSSION QUESTIONS ========== -->
+      <section id="discussion" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h2 class="section-title">Discussion Questions</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="discussion-cards">
+            <div class="discussion-card">
+              <span class="discussion-num">1</span>
+              <p>Given that our nursing staff performs most bedside assessments, should we implement the Nu-DESC as a routine q-shift screening tool for all patients in active withdrawal? What training would be required?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">2</span>
+              <p>The CAM's sensitivity drops dramatically when administered by nurses without specific training (25% vs 86%). How do we ensure adequate staff training on delirium recognition while managing turnover in residential settings?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">3</span>
+              <p>At what point in the withdrawal trajectory should we increase screening frequency? Should CIWA scores above a certain threshold automatically trigger formal delirium screening?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">4</span>
+              <p>When a patient screens positive, what is our current time-to-transfer to Mission Hospital (ASAM 4.0)? Are there system-level barriers to expediting this?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">5</span>
+              <p>Should we consider implementing a two-stage protocol — routine Nu-DESC nursing screens with physician CAM confirmation — rather than relying on a single tool?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">6</span>
+              <p>These tools were validated primarily in geriatric populations. How confident are we in applying these cutoffs to a younger SUD population with acute withdrawal states?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 8: REFERENCES ========== -->
+      <section id="references" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h2 class="section-title">References</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <ul class="ref-list">
+            <li>
+              <strong>Lin CJ, Su IC, Huang SW, Chen PY, Traynor V, Chang HC, Liu IH, Lai YS, Lee HC, Rolls K, Chiu HY.</strong> <span class="ref-authors">Delirium assessment tools among hospitalized older adults: A systematic review and meta-analysis of diagnostic accuracy. <em>Ageing Research Reviews</em>, 2023;90:102025. DOI: <a href="https://doi.org/10.1016/j.arr.2023.102025" target="_blank" rel="noopener noreferrer">10.1016/j.arr.2023.102025</a></span>
+            </li>
+            <li>
+              <strong>Ely EW (original); American Association of Critical-Care Nurses (adaptation).</strong> <span class="ref-authors">Confusion Assessment Method for the ICU (CAM-ICU) Worksheet. Copyright © 2002, E. Wesley Ely, MD, MPH and Vanderbilt University. Endorsed by SCCM 2013 Pain, Agitation, and Delirium (PAD) guidelines.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== PROVIDER RESOURCES ========== -->
+      <section class="section-card" id="resources">
+        <div class="section-header">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <h2 class="section-title">Provider Resources</h2>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-body">
+          <p style="margin-bottom:var(--space-3);color:var(--color-text-muted);font-size:var(--text-sm);">Downloadable provider-facing documents for clinical reference.</p>
+          <a href="delirium-tools-provider-summary.pdf" class="download-link" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Provider Summary: Delirium Assessment Tools (2-page brief)
+          </a>
+        </div>
+      </section>
+
+      <!-- ========== FEEDBACK ========== -->
+      <div class="section-card" id="feedback">
+        <div class="section-header">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h2 class="section-title">Feedback</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body">
+          <div class="content-block">
+            <p>Suggestions, corrections, or discussion points for this article review.</p>
+            <form class="feedback-form" id="feedbackForm" onsubmit="submitFeedback(event)">
+              <div class="feedback-field">
+                <label for="feedbackName">Your Name</label>
+                <input type="text" id="feedbackName" name="name" placeholder="e.g., Dr. Smith" required>
+              </div>
+              <div class="feedback-field">
+                <label for="feedbackComment">Comment / Suggestion</label>
+                <textarea id="feedbackComment" name="comment" placeholder="Share a suggestion, correction, or discussion point…" required></textarea>
+              </div>
+              <button type="submit" class="feedback-submit">Submit</button>
+            </form>
+            <div class="feedback-success" id="feedbackSuccess" role="alert">Thank you — your feedback has been recorded.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>
+          Journal Club Dashboard · For educational and clinical discussion purposes only
+        </p>
+        <p style="margin-top: var(--space-2);">
+          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="../../feedback-submit.js"></script>
+</body>
+</html>

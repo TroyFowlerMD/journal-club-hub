@@ -785,6 +785,141 @@ a:hover { color: var(--accent-hover); }
   background: var(--text-faint);
 }
 
+/* --- Feedback Box --- */
+.feedback-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px;
+  margin-top: 16px;
+}
+.feedback-box h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.feedback-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.feedback-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.feedback-field input,
+.feedback-field textarea {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.feedback-field input::placeholder,
+.feedback-field textarea::placeholder {
+  color: var(--text-faint);
+}
+.feedback-field input:focus,
+.feedback-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+.feedback-field textarea {
+  min-height: 90px;
+}
+.feedback-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s, opacity 0.2s;
+}
+.feedback-submit:hover {
+  background: var(--accent-hover);
+}
+.feedback-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.feedback-success {
+  display: none;
+  background: rgba(109, 170, 69, 0.12);
+  border: 1px solid rgba(109, 170, 69, 0.3);
+  color: var(--success);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.feedback-success.visible {
+  display: block;
+}
+@media print {
+  .feedback-box { display: none; }
+}
+@media (max-width: 768px) {
+  .feedback-box { padding: 20px; }
+}
+
+/* --- +Request Button --- */
+.request-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: inherit;
+  color: var(--accent);
+  background: var(--accent-glow);
+  border: 1px solid rgba(79, 152, 163, 0.25);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.request-btn:hover {
+  background: rgba(79, 152, 163, 0.2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.request-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.request-btn.requested {
+  background: rgba(109, 170, 69, 0.12);
+  border-color: rgba(109, 170, 69, 0.3);
+  color: var(--success);
+  opacity: 1;
+}
+.request-btn svg {
+  width: 12px;
+  height: 12px;
+}
+
 /* Focus visible for a11y */
 a:focus-visible,
 button:focus-visible {

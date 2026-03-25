@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+
+<!-- Perplexity Computer Attribution — SEO Meta Tags -->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smoking Cessation &amp; SUD Recovery — Journal Club</title>
+<meta name="description" content="Journal club dashboard for Parks et al. 2025 — Cigarette smoking cessation during recovery from substance use disorders. PATH Study longitudinal cohort analysis.">
+
+<!-- Favicon (inline SVG data URI) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f1419'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='700' fill='%234F98A3' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<!-- Inter Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     MOBILE HEADER
+     ============================================================ -->
+<header class="mobile-header">
+  <button id="hamburger" class="hamburger" aria-label="Open navigation" aria-expanded="false">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+  <span class="mobile-title">Smoking &amp; Recovery</span>
+</header>
+
+<!-- Sidebar Overlay (mobile) -->
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<div class="app-layout">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside id="sidebar" class="sidebar" role="navigation" aria-label="Article navigation">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <!-- Inline SVG Logo: crossed-out cigarette / recovery symbol -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Smoking Cessation Journal Club">
+          <rect width="32" height="32" rx="8" fill="currentColor" fill-opacity="0.08"/>
+          <!-- Cigarette body -->
+          <rect x="6" y="14" width="16" height="4" rx="1" stroke="var(--color-text-muted)" stroke-width="1.5" fill="none"/>
+          <!-- Filter -->
+          <rect x="6" y="14" width="4" height="4" rx="1" fill="var(--color-warning)" fill-opacity="0.4" stroke="var(--color-warning)" stroke-width="1"/>
+          <!-- Smoke wisps -->
+          <path d="M24 14c0-2 1-3 1-5" stroke="var(--color-text-faint)" stroke-width="1.2" stroke-linecap="round"/>
+          <path d="M22 12c0-2.5 1.5-3.5 1-6" stroke="var(--color-text-faint)" stroke-width="1" stroke-linecap="round"/>
+          <!-- Strike-through (cessation) -->
+          <line x1="4" y1="26" x2="28" y2="6" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="sidebar-title">Smoking &amp; Recovery</div>
+          <div class="sidebar-subtitle">JAMA Psychiatry · 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="../.." class="sidebar-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Hub
+    </a>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-label">Sections</div>
+      <a href="#overview">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+        Overview
+      </a>
+      <a href="#key-results">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Key Results
+      </a>
+      <a href="#methods">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Methods
+      </a>
+      <a href="#strengths-limitations">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+        Strengths &amp; Limits
+      </a>
+      <a href="#clinical-implications">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        Clinical Implications
+      </a>
+      <a href="#discussion">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Discussion Qs
+      </a>
+      <a href="#references">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        References
+      </a>
+      <a href="#resources">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resources
+      </a>
+      <a href="#feedback">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Feedback
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <!-- JS fills this -->
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main class="main-content">
+    <div class="main-inner">
+
+      <!-- Quick Stats Strip -->
+      <div class="quick-stats">
+        <span class="stat-pill stat-pill--primary">
+          <span class="stat-label">Participants</span>
+          <span class="stat-value">2,652</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Source</span>
+          <span class="stat-value">PATH Study</span>
+        </span>
+        <span class="stat-pill stat-pill--primary">
+          <span class="stat-label">Adjusted OR</span>
+          <span class="stat-value">1.30</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Evidence</span>
+          <span class="stat-value">Level III</span>
+        </span>
+        <span class="stat-pill">
+          <span class="stat-label">Follow-Up</span>
+          <span class="stat-value">4 Waves</span>
+        </span>
+        <span class="stat-pill stat-pill--warning">
+          <span class="stat-label">P Value</span>
+          <span class="stat-value">= .009</span>
+        </span>
+      </div>
+
+      <!-- ========== SECTION 1: OVERVIEW ========== -->
+      <section id="overview" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          <h2 class="section-title">Overview</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <h3>Clinical Question</h3>
+          <p style="font-size: var(--text-base); color: var(--color-text); font-weight: 500; max-width: 65ch;">
+            Among US adults with a history of substance use disorder, is within-person transition from current to former cigarette smoking associated with sustained SUD recovery over time, after accounting for between-person confounders?
+          </p>
+
+          <h3>Study Characteristics</h3>
+          <div class="meta-grid">
+            <div class="meta-item">
+              <div class="meta-label">Study Design</div>
+              <div class="meta-value">Longitudinal Cohort, Fixed-Effects Logistic Regression</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Data Source</div>
+              <div class="meta-value">PATH Study, nationally representative</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Sample Size</div>
+              <div class="meta-value">2,652 adults, 9,088 observations</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Follow-Up</div>
+              <div class="meta-value">4 waves, 2013–2018</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Exposure</div>
+              <div class="meta-value">Cigarette smoking status</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Outcome</div>
+              <div class="meta-value">SUD recovery via GAIN-SS</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Evidence Level</div>
+              <div class="meta-value"><span class="badge badge--warning">Level III — Observational</span></div>
+            </div>
+          </div>
+
+          <h3>Background</h3>
+          <ul>
+            <li><strong>48.5 million US adults</strong> have an SUD in the past 12 months</li>
+            <li><strong>35.8%</strong> of those with an SUD currently smoke — disproportionately high tobacco-related mortality</li>
+            <li>Tobacco use is <strong>undertreated in SUD treatment facilities</strong> — often considered "low priority"</li>
+            <li>Treatment professionals may defer tobacco cessation, believing it <strong>threatens primary recovery</strong></li>
+            <li>Directly relevant to <strong>ASAM 3.7/3.5 residential settings</strong> where tobacco policies vary widely</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 2: KEY RESULTS ========== -->
+      <section id="key-results" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <h2 class="section-title">Key Results</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+
+          <!-- Sub-tabs -->
+          <div class="subsection-tabs" role="tablist">
+            <button class="subsection-tab active" data-tab="primary" role="tab" aria-selected="true">Primary Analysis</button>
+            <button class="subsection-tab" data-tab="sensitivity" role="tab" aria-selected="false">Sensitivity Analyses</button>
+            <button class="subsection-tab" data-tab="other" role="tab" aria-selected="false">Other Associations</button>
+          </div>
+
+          <!-- PRIMARY ANALYSIS Panel -->
+          <div id="panel-primary" class="subsection-panel active" role="tabpanel">
+            <h3>Primary Cohort (Waves 1–4, 2013–2018)</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>OR (Former vs Current)</th>
+                  <th>95% CI</th>
+                  <th>P Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Unadjusted (Model 1)</td>
+                  <td>1.42</td>
+                  <td>1.18–1.71</td>
+                  <td>&lt;.001</td>
+                </tr>
+                <tr>
+                  <td><strong>Adjusted (Model 2)</strong></td>
+                  <td><strong>1.30</strong></td>
+                  <td><strong>1.07–1.57</strong></td>
+                  <td><strong>.009</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="clinical-alert" style="margin-top: var(--space-4);">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22c5.5 0 10-4.5 10-10S17.5 2 12 2 2 6.5 2 12s4.5 10 10 10zM12 8v4M12 16h.01"/></svg>
+              <p><strong>Key finding:</strong> Quitting smoking was associated with a <strong>30% increase in odds of SUD recovery</strong> after adjusting for time-varying covariates and all between-person differences.</p>
+            </div>
+          </div>
+
+          <!-- SENSITIVITY ANALYSES Panel -->
+          <div id="panel-sensitivity" class="subsection-panel" role="tabpanel">
+            <h3>Sensitivity Analyses</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Analysis</th>
+                  <th>Adjusted OR</th>
+                  <th>95% CI</th>
+                  <th>P Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Lagged Model</strong> (smoking change precedes recovery)</td>
+                  <td><strong>1.43</strong></td>
+                  <td>1.00–2.05</td>
+                  <td>.04</td>
+                </tr>
+                <tr>
+                  <td><strong>Second Cohort</strong> (W4–W7, 2016–2023, spans COVID-19)</td>
+                  <td><strong>1.37</strong></td>
+                  <td>1.13–1.66</td>
+                  <td>.002</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul style="margin-top: var(--space-4);">
+              <li><strong>Lagged model:</strong> Confirms temporal ordering — smoking cessation <em>preceded</em> recovery improvement (OR 1.43, P = .04)</li>
+              <li><strong>Second cohort replication:</strong> Association persisted across an independent cohort spanning the COVID-19 pandemic (OR 1.37, P = .002)</li>
+            </ul>
+          </div>
+
+          <!-- OTHER ASSOCIATIONS Panel -->
+          <div id="panel-other" class="subsection-panel" role="tabpanel">
+            <h3>Other Significant Associations with SUD Recovery</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Variable</th>
+                  <th>OR</th>
+                  <th>95% CI</th>
+                  <th>P Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Time (positive trend)</td>
+                  <td>1.11</td>
+                  <td>1.05–1.17</td>
+                  <td>&lt;.0001</td>
+                </tr>
+                <tr>
+                  <td>Mental health improvement (PROMIS)</td>
+                  <td>1.04</td>
+                  <td>1.03–1.06</td>
+                  <td>&lt;.0001</td>
+                </tr>
+                <tr>
+                  <td>Never smokers vs current</td>
+                  <td>1.72</td>
+                  <td>0.36–8.35</td>
+                  <td>.50</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul style="margin-top: var(--space-4);">
+              <li><strong>Time:</strong> Recovery rates improved across study waves (OR 1.11 per wave)</li>
+              <li><strong>Mental health:</strong> PROMIS improvement independently associated with recovery (OR 1.04 per unit)</li>
+              <li><strong>Never smokers vs current:</strong> Not statistically significant — <strong>small cell size</strong> (8.5% never smokers) limits inference</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========== SECTION 3: METHODS DEEP DIVE ========== -->
+      <section id="methods" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <h2 class="section-title">Methods Deep Dive</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <h3>Fixed-Effects Logistic Regression</h3>
+          <ul>
+            <li><strong>Core principle:</strong> Each person serves as their own control — the model estimates the association between <em>within-person changes</em> in smoking status and <em>within-person changes</em> in recovery status</li>
+            <li><strong>Eliminates all time-invariant confounders</strong> — both measured (race, sex, education at baseline) and unmeasured (genetic predisposition, baseline substance type, prior treatment history, personality traits)</li>
+            <li><strong>Approximates experimental conditions</strong> for observational data by leveraging longitudinal within-person variation only</li>
+            <li><strong>Requires within-person change:</strong> Individuals who remained stable across all waves (consistently recovered or consistently not) are excluded from the estimating sample — the model only uses information from individuals who changed status</li>
+          </ul>
+
+          <h3>Why This Design Matters</h3>
+          <ul>
+            <li>Standard logistic regression (between-person) cannot rule out that healthier/more motivated people both quit smoking <em>and</em> recover from SUD</li>
+            <li>Fixed-effects removes this "healthy quitter" confound by comparing each person to themselves over time</li>
+            <li>Remaining concern: unmeasured <strong>time-varying</strong> confounders (e.g., life events that simultaneously improve all health behaviors)</li>
+          </ul>
+
+          <h3>Time-Varying Covariates Controlled</h3>
+          <ul>
+            <li>Mental health status (PROMIS Global Mental Health scale)</li>
+            <li>Educational attainment changes</li>
+            <li>Physician visits (past 12 months)</li>
+            <li>Emergency department visits (past 12 months)</li>
+            <li>Smoking cessation medication use (varenicline, bupropion)</li>
+            <li>Urban/rural residence changes</li>
+          </ul>
+
+          <h3>Outcome Measurement</h3>
+          <ul>
+            <li><strong>GAIN-SS (Global Appraisal of Individual Needs — Short Screener)</strong> — validated instrument for SUD symptom assessment</li>
+            <li><strong>Recovery definition:</strong> High lifetime symptoms (score 4–7) + zero past-year symptoms = sustained remission</li>
+            <li>Binary classification: in recovery vs. current SUD/returned to use</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 4: STRENGTHS & LIMITATIONS ========== -->
+      <section id="strengths-limitations" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22V8M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+          <h2 class="section-title">Strengths &amp; Limitations</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="two-col">
+            <div class="two-col-panel two-col-panel--strength">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Strengths
+              </h4>
+              <ol>
+                <li>Nationally representative sample (PATH Study) — generalizable to millions of US adults with SUD</li>
+                <li>Fixed-effects regression removes all time-invariant between-person confounders (approximates experimental conditions)</li>
+                <li>Robust across multiple sensitivity analyses (lagged models, second cohort)</li>
+                <li>Adjusted for relevant time-varying covariates including mental health changes and smoking cessation medications</li>
+                <li>Uses validated GAIN-SS measure of SUD recovery</li>
+                <li>Longitudinal design with annual assessments over 4 waves</li>
+                <li>Second cohort spanned COVID-19 pandemic — association persisted</li>
+                <li>Population-based (includes treated and untreated individuals)</li>
+              </ol>
+            </div>
+            <div class="two-col-panel two-col-panel--limitation">
+              <h4>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+                Limitations
+              </h4>
+              <ol>
+                <li>No direct measure of SUD treatment or anti-craving medications</li>
+                <li>All measures self-reported</li>
+                <li>Recovery defined as abstinence only — does not capture harm reduction outcomes</li>
+                <li>Potential unmeasured time-varying confounders</li>
+                <li>Cannot establish causation despite accounting for temporal order in sensitivity analyses</li>
+                <li>Never-smoking category had small cell size (8.5%), limiting inference</li>
+                <li>Does not assess e-cigarettes or other nicotine products</li>
+                <li>Fixed-effects design requires within-person change — excludes stable individuals</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 5: CLINICAL IMPLICATIONS ========== -->
+      <section id="clinical-implications" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <h2 class="section-title">Clinical Implications for ASAM 3.7/3.5 Practice</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="clinical-alert">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+            <p><strong>This evidence directly challenges the "one thing at a time" philosophy.</strong> Quitting smoking is not separate from recovery — it is part of recovery.</p>
+          </div>
+
+          <h3>Recommended Practice Changes</h3>
+          <ul>
+            <li><strong>Integrate tobacco treatment into standard SUD care</strong> — not as an add-on, not deferred to post-discharge</li>
+            <li><strong>Offer NRT, varenicline, and/or bupropion</strong> to all smoking patients in residential treatment as first-line pharmacotherapy</li>
+            <li><strong>Staff education:</strong> Smoking cessation does not threaten recovery — it supports it (OR 1.30, P = .009)</li>
+            <li><strong>Smoke-free facility policies</strong> supported by this evidence base</li>
+            <li><strong>Patient education:</strong> Use motivational interviewing to frame quitting smoking as part of recovery, not separate from it</li>
+            <li><strong>Track dual outcomes:</strong> Monitor both SUD recovery and smoking status as treatment outcomes</li>
+            <li><strong>Population-level approaches:</strong> Support tobacco quit-line referrals, consistent tobacco taxation, and smoke-free policies</li>
+          </ul>
+
+          <h3>Context</h3>
+          <ul>
+            <li><strong>35.8% of adults with SUD currently smoke</strong> — tobacco use remains undertreated in most SUD treatment facilities</li>
+            <li>Many residential programs defer tobacco cessation or lack tobacco treatment services entirely</li>
+            <li>Staff may believe addressing smoking will compromise primary SUD recovery — this study provides Level III evidence that the opposite is true</li>
+            <li>Renewed calls to integrate smoking cessation into all SUD treatment (Kleinman &amp; Barnett, JAMA Psychiatry 2024)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 6: DISCUSSION QUESTIONS ========== -->
+      <section id="discussion" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <h2 class="section-title">Discussion Questions</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <div class="discussion-cards">
+            <div class="discussion-card">
+              <span class="discussion-num">1</span>
+              <p>Does our current facility policy support or hinder tobacco cessation during residential treatment? What specific changes would bring us into alignment with this evidence?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">2</span>
+              <p>Given that 35.8% of adults with SUD currently smoke, what is our facility's rate, and are we systematically assessing and treating tobacco use disorder?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">3</span>
+              <p>This study found that mental health improvement independently predicted recovery (OR 1.04). How does this inform our approach to co-occurring psychiatric care during SUD treatment?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">4</span>
+              <p>The "one thing at a time" belief persists despite this evidence. What institutional or cultural barriers prevent us from integrating tobacco treatment, and how do we address them?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">5</span>
+              <p>How should we frame simultaneous tobacco cessation to patients who believe it will compromise their primary recovery? What motivational interviewing approaches work best?</p>
+            </div>
+            <div class="discussion-card">
+              <span class="discussion-num">6</span>
+              <p>The study used abstinence as the recovery measure. Should we also consider harm reduction metrics (e.g., reduction in use) when evaluating our treatment outcomes?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 7: REFERENCES ========== -->
+      <section id="references" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h2 class="section-title">Key References</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <ul class="ref-list">
+            <li>
+              <strong>Parks MJ, Blanco C, Creamer MR, et al.</strong> — <span class="ref-authors">Cigarette Smoking During Recovery From Substance Use Disorders. <em>JAMA Psychiatry.</em> Published online August 13, 2025. DOI: <a href="https://doi.org/10.1001/jamapsychiatry.2025.1976" target="_blank" rel="noopener noreferrer">10.1001/jamapsychiatry.2025.1976</a></span>
+            </li>
+            <li>
+              <strong>Kleinman RA, Barnett PG.</strong> — <span class="ref-authors">Integrating Smoking Cessation Into Substance Use Disorder Treatment. <em>JAMA Psychiatry.</em> 2024.</span>
+            </li>
+            <li>
+              <strong>Han B, Jones CM, Einstein EB, Compton WM.</strong> — <span class="ref-authors">Trends in and characteristics of substance use disorder treatment admissions among adults with cigarette smoking. <em>JAMA Psychiatry.</em> 2022.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========== SECTION 8: PATIENT RESOURCES ========== -->
+      <div class="section-card" id="resources">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <h2 class="section-title">Patient Resources</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body">
+          <div class="content-block">
+            <p>Downloadable patient education materials for use in clinical settings.</p>
+            <a href="smoking-cessation-patient-handout.pdf" class="download-link" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Patient Education: Quitting Smoking During Recovery (1-page handout)
+            </a>
+            <a href="smoking-cessation-provider-summary.pdf" class="download-link" download style="margin-top: var(--space-3); display: inline-flex;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Provider Summary: Smoking Cessation &amp; SUD Recovery (2-page brief)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========== SECTION 9: FEEDBACK ========== -->
+      <section id="feedback" class="section-card">
+        <div class="section-header" aria-expanded="true">
+          <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          <h2 class="section-title">Feedback</h2>
+          <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section-body content-block">
+          <p>Share your thoughts on this journal club presentation — feedback helps improve future sessions.</p>
+          <form class="feedback-form" id="feedback-form">
+            <div class="feedback-field">
+              <label for="feedback-name">Name (optional)</label>
+              <input type="text" id="feedback-name" name="name" placeholder="Your name">
+            </div>
+            <div class="feedback-field">
+              <label for="feedback-role">Role</label>
+              <input type="text" id="feedback-role" name="role" placeholder="e.g., Attending, Resident, Nurse, Pharmacist">
+            </div>
+            <div class="feedback-field">
+              <label for="feedback-message">Comments</label>
+              <textarea id="feedback-message" name="message" placeholder="What worked well? What could be improved? Any topics you'd like covered next?"></textarea>
+            </div>
+            <button type="submit" class="feedback-submit">Submit Feedback</button>
+          </form>
+          <div class="feedback-success" id="feedback-success">
+            Thank you for your feedback! Your response has been recorded.
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>
+          Journal Club Dashboard · For educational and clinical discussion purposes only
+        </p>
+        <p style="margin-top: var(--space-2);">
+          <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+<script src="../../feedback-submit.js"></script>
+</body>
+</html>
