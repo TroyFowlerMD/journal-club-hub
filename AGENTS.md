@@ -6,11 +6,11 @@
 - Durable documentation lives in docs/, AGENTS.md, TASKS.md, WORKLOG.md, and DECISIONS.md.
 - Work in this repo in place. Do not move folders, clone over this repo, or rewrite history unless Dr. Fowler explicitly asks.
 - Default branch: main.
-- Live/public target: https://troyfowlermd.github.io/journal-club-hub/.
+- Live/public target: https://journal-club-hub.vercel.app/.
 
 ## Project Overview
 - TroyMD Journal Club Hub for interactive addiction medicine journal club dashboards and evidence-review resources.
-- Static HTML/CSS/JavaScript site served through GitHub Pages.
+- Static HTML/CSS/JavaScript site served through Vercel, with GitHub Pages retained only for legacy redirects when enabled.
 - Architecture and internal-link review are still pending, so inspect files before structural changes.
 
 ## Project Structure

@@ -27,3 +27,9 @@ Context: Dr. Fowler wants Codex to notice chances to make his coding, GitHub, Gi
 Decision: When Codex sees a practical workflow improvement, it should present the opportunity proactively with the expected benefit, any risk or cost, and the smallest safe next step.
 Rationale: Small workflow improvements compound, especially while Dr. Fowler is learning Git and using Codex across multiple machines.
 Consequences: Future sessions should separate optional workflow suggestions from required task work so recommendations help without derailing the current task.
+
+### 2026-06-12 - Use Vercel As Canonical Host And Keep GitHub Pages Only As A Public Redirect
+Context: Journal Club Hub was migrated off GitHub Pages to Vercel, but the old `troyfowlermd.github.io/journal-club-hub` URL still needed a legacy forwarder.
+Decision: Treat `https://journal-club-hub.vercel.app/` as the canonical live host and keep the repo public while GitHub Pages serves only the `gh-pages` redirect branch.
+Rationale: Live verification showed the requested `redirect + private` combination unpublished Pages and broke the old URL on the current GitHub account.
+Consequences: Do not make `TroyFowlerMD/journal-club-hub` private unless the legacy Pages URL is being retired or a different redirect strategy replaces GitHub Pages.

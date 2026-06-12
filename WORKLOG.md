@@ -24,3 +24,10 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 - In progress: Existing Journal Club Hub tasks remain unchanged.
 - Blockers/notes: Instruction-only change; no app runtime code changed.
 
+### 2026-06-12 - Codex desktop - Vercel migration and legacy redirect cutover
+- Completed: Created the `journal-club-hub` Vercel project, linked the local repo, and verified live production rendering at `https://journal-club-hub.vercel.app/` plus `https://journal-club-hub.vercel.app/articles/fda-7oh-2025/`.
+- Completed: Added a dedicated `gh-pages` branch with redirect files, repointed GitHub Pages to that branch, and verified the legacy article URL resolves to the Vercel-hosted content after propagation.
+- Completed: Updated repo docs and the linked `my-dashboard` card to use the canonical Vercel hostname.
+- In progress: Architecture review and generated-attribution sweep remain open in TASKS.md.
+- Blockers/notes: The requested `redirect + private` combination is not supported on the current GitHub account for this repo; making the repo private unpublished Pages and broke the legacy URL, so the repo was restored to `public`.
+
