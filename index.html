@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to Journal Club Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=https://journal-club-hub.vercel.app/">
+  <script>
+    (function () {
+      var base = "https://journal-club-hub.vercel.app";
+      var path = window.location.pathname.replace(/^\/journal-club-hub/, "") || "/";
+      var target = base + path + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="https://journal-club-hub.vercel.app/">Journal Club Hub</a>...</p>
+</body>
+</html>
