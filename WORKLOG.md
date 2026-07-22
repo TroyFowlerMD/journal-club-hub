@@ -9,9 +9,9 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 - Completed: Added `articles/medetomidine-2026/index.html` and added the article to the public Hub library.
 - Completed: Added a printable two-page handout PDF, its HTML source, and a QR PNG whose decoded payload is exactly `https://journal-club-hub.vercel.app/`.
 - Completed: Verified local article links, PDF metadata/rendering, and QR decoding.
-- Completed: Committed as `1afc49f` (`Add medetomidine journal club entry`), pushed to `origin/main`, deployed to the canonical Vercel production site, and live-verified at the Hub root and article route.
+- Completed: Committed as `4a8b951` (`Expose Medetomidine handout and deployment status`, following `1afc49f`), pushed to `origin/main`, deployed to the canonical Vercel production site, and live-verified at the Hub root and article route.
 - Completed: Added a direct printable-handout link to the live article dashboard; the QR payload remains the canonical Hub URL with no redirect or tracking intermediary.
-- Blockers/notes: None known. Deployment `dpl_7HxX5uggPmGScKh9FCcmAnpkB8yC` is serving the production route.
+- Blockers/notes: None known. Deployment `dpl_5t9o58jvok3jw3nRiksRBZjsiihM` is serving the production route.
 
 ## Entry Format
 
