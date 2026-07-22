@@ -39,3 +39,8 @@ Context: The Medetomidine article presents early clinical recommendations from l
 Decision: Label claims by evidence type where relevant and encode `https://journal-club-hub.vercel.app/` directly in the QR asset without a URL shortener, tracking wrapper, or forwarding intermediary.
 Rationale: Prevents expert protocol suggestions from appearing equivalent to trial evidence and keeps the printed link durable and auditable.
 Consequences: Future article handouts should preserve direct canonical URLs and make evidence strength visible when the source is a narrative review, case series, or expert framework.
+
+### 2026-07-22 - Medetomidine Handout Uses Last-Page QR Footer And Explicit ASAM Break
+Context: Review requested the QR code move out of the header, the Hub label associate directly with that QR, a facilitator discussion follow the prompts, and the ASAM implications section begin page 2.
+Decision: Keep page 1 focused on the paper and discussion, place a two-paragraph facilitator synthesis after the prompts, begin ASAM 3.7/3.5 implications at the top of page 2, and place the direct Hub QR with its label in the page 2 footer.
+Consequences: The PDF remains two pages while making the discussion and navigation cues clearer for live journal club use.

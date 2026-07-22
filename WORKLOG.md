@@ -11,6 +11,8 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 - Completed: Verified local article links, PDF metadata/rendering, and QR decoding.
 - Completed: Committed as `4a8b951` (`Expose Medetomidine handout and deployment status`, following `1afc49f`), pushed to `origin/main`, deployed to the canonical Vercel production site, and live-verified at the Hub root and article route.
 - Completed: Added a direct printable-handout link to the live article dashboard; the QR payload remains the canonical Hub URL with no redirect or tracking intermediary.
+- Completed: Revised the handout so the header no longer says `TroyMD Journal Club Hub`; the label now sits beside the direct QR code in the last-page footer.
+- Completed: Added a two-paragraph facilitator discussion addressing all six prompts and forced `Clinical implications for ASAM 3.7/3.5 practice` to the top of page 2; rendered both pages for visual inspection.
 - Blockers/notes: None known. Deployment `dpl_5t9o58jvok3jw3nRiksRBZjsiihM` is serving the production route.
 
 ## Entry Format
