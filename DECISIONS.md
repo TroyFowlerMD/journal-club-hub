@@ -33,3 +33,9 @@ Context: Journal Club Hub was migrated off GitHub Pages to Vercel, but the old `
 Decision: Treat `https://journal-club-hub.vercel.app/` as the canonical live host and keep the repo public while GitHub Pages serves only the `gh-pages` redirect branch.
 Rationale: Live verification showed the requested `redirect + private` combination unpublished Pages and broke the old URL on the current GitHub account.
 Consequences: Do not make `TroyFowlerMD/journal-club-hub` private unless the legacy Pages URL is being retired or a different redirect strategy replaces GitHub Pages.
+
+### 2026-07-22 - Medetomidine Entry Uses Explicit Evidence Labels And Direct Hub QR
+Context: The Medetomidine article presents early clinical recommendations from limited, evolving evidence, and the printable handout needs a QR link back to the Journal Club Hub.
+Decision: Label claims by evidence type where relevant and encode `https://journal-club-hub.vercel.app/` directly in the QR asset without a URL shortener, tracking wrapper, or forwarding intermediary.
+Rationale: Prevents expert protocol suggestions from appearing equivalent to trial evidence and keeps the printed link durable and auditable.
+Consequences: Future article handouts should preserve direct canonical URLs and make evidence strength visible when the source is a narrative review, case series, or expert framework.

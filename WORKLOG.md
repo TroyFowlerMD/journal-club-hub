@@ -4,6 +4,13 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 
 ---
 
+### 2026-07-22 - Codex desktop - Medetomidine journal club entry
+- Completed: Read the complete eight-page source article, synthesized its clinical concepts, and cross-checked additional professional context from CDC, UPMC, PubMed, and AAFP resources.
+- Completed: Added `articles/medetomidine-2026/index.html` and added the article to the public Hub library.
+- Completed: Added a printable two-page handout PDF, its HTML source, and a QR PNG whose decoded payload is exactly `https://journal-club-hub.vercel.app/`.
+- Completed: Verified local article links, PDF metadata/rendering, and QR decoding.
+- Blockers/notes: Changes are local and not yet committed, pushed, or live-verified.
+
 ## Entry Format
 
     ### YYYY-MM-DD - [machine/profile] - [session summary]

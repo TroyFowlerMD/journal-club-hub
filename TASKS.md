@@ -14,6 +14,7 @@
 - [ ] Check for any remaining public generated-attribution/tooling references.
 
 ## Completed (last 30 days)
+- [x] Added the Medetomidine 2026 article dashboard and printable journal-club handout with evidence labels and a direct QR code to the canonical Hub URL.
 - [x] Migrated the canonical public host to `https://journal-club-hub.vercel.app`, preserved the legacy GitHub Pages URL as a redirect, and confirmed the repo must remain public for that redirect to work on the current account.
 - [x] Verified the current Vercel root and a key article/dashboard page render expected content, not just HTTP 200.
 - [x] Published public cleanup work for `journal-club-hub` as a separate repo pass.
