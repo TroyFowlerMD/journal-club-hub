@@ -7,6 +7,7 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 ### 2026-07-22 - Codex Work Mode - Medetomidine PDF typography correction
 - Completed: Rebuilt the two-page Medetomidine journal-club handout with an embedded condensed sans-serif font, normal character positioning, and body text approximately one point larger than the smallest text in the prior PDF.
 - Completed: Preserved the page-2 ASAM section break, direct Journal Club Hub QR footer, content hierarchy, and two-page format; rendered and visually inspected both pages.
+- Completed: Triggered a fresh production deployment after confirming Vercel had not received the PDF typography commit through its Git integration.
 - Blockers/notes: None known.
 
 ### 2026-07-22 - Codex desktop - Medetomidine journal club entry
