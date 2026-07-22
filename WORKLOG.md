@@ -4,6 +4,11 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 
 ---
 
+### 2026-07-22 - Codex Work Mode - Medetomidine PDF typography correction
+- Completed: Rebuilt the two-page Medetomidine journal-club handout with an embedded condensed sans-serif font, normal character positioning, and body text approximately one point larger than the smallest text in the prior PDF.
+- Completed: Preserved the page-2 ASAM section break, direct Journal Club Hub QR footer, content hierarchy, and two-page format; rendered and visually inspected both pages.
+- Blockers/notes: None known.
+
 ### 2026-07-22 - Codex desktop - Medetomidine journal club entry
 - Completed: Read the complete eight-page source article, synthesized its clinical concepts, and cross-checked additional professional context from CDC, UPMC, PubMed, and AAFP resources.
 - Completed: Added `articles/medetomidine-2026/index.html` and added the article to the public Hub library.
@@ -41,4 +46,3 @@ This file records completed Codex work sessions for Journal Club Hub. Append new
 - Completed: Updated repo docs and the linked `my-dashboard` card to use the canonical Vercel hostname.
 - In progress: Architecture review and generated-attribution sweep remain open in TASKS.md.
 - Blockers/notes: The requested `redirect + private` combination is not supported on the current GitHub account for this repo; making the repo private unpublished Pages and broke the legacy URL, so the repo was restored to `public`.
-
